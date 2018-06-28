@@ -1,20 +1,17 @@
 var load = require('./src/loader.js');
+var convert = require('./src/output.js');
 
 // call functions
 function main() {
 
   // get file directories
   let md = load.getNames("content/md");
-  let html = load.getNames("content/html");
+  let html = convert.toMarkdown(md);
 
-  // test stuff don't mind me~
-  // md.forEach(ele => {
-  //   console.log(ele);
-  // });
+  html.forEach(ele => {
+    console.log(ele);
+  });
 
-  // html.forEach(ele => {
-  //   console.log(ele);
-  // })
   return 0;
 }
 

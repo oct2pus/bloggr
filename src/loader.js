@@ -1,3 +1,4 @@
+// requires/globals
 var fs = require('fs');
 
 
